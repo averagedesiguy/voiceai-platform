@@ -31,6 +31,9 @@ async def lifespan(app: FastAPI):
 
     # Shutdown
     print("👋 VoiceAI Platform shutting down...")
+
+import os
+print("PORT ENV:", os.getenv("PORT"))
 from fastapi import FastAPI
 app = FastAPI()
 
