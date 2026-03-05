@@ -34,6 +34,9 @@ async def lifespan(app: FastAPI):
 from fastapi import FastAPI
 app = FastAPI()
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 app = FastAPI(
     title="VoiceAI Platform",
     description=(
