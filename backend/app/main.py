@@ -31,7 +31,8 @@ async def lifespan(app: FastAPI):
 
     # Shutdown
     print("👋 VoiceAI Platform shutting down...")
-
+from fastapi import FastAPI
+app = FastAPI()
 
 app = FastAPI(
     title="VoiceAI Platform",
